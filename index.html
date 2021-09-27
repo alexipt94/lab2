@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+<form class='flex-container' onsubmit="alert('submit!');return false">
+	<label   class="form-label" for="name">What is your name?</label>
+	<div class="input-group">
+<input id="name" type="text" name="name1" placeholder="Name,3 letters and more"
+required minlength="3" aria-label="First name" class="form-control ">
+<input type="text" aria-label="Last name"  placeholder="Surname,3 letters and more" class="form-control" minlength="3" required">
+</div >
+<label>Gender</label>
+<div>
+<div class="form-check form-check-inline">
+	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+	<label class="form-check-label" for="inlineRadio1">Male</label>
+</div>
+<div class="form-check form-check-inline">
+	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+	<label class="form-check-label" for="inlineRadio2">Female</label>
+</div>
+</div>
+
+<label for="t2">What's your e-mail address?</label>
+<input type="email" id="t2" class="form-control" name="email" placeholder="smth@smth.smth" >
+<label for="n1">How old are you?</label>
+<input type="number" class="form-control" min="12" max="120" step="1" id="n1" name="age" pattern="\d+" placeholder="Number 12-120, step 1">
+<label for="telnum">What's your phone number?</label>
+<input type="tel" id="telnum" name="telnum"  class="form-control"  required pattern="[+7|8|7][0-9]{10}" placeholder="(+7)*** *** ** **">
+<label for="countries">Country</label>
+<select id="countries" class="form-control" >
+	<option value="ru">Россия</option>
+	<option value="by">Беларусь</option>
+	<option value="ua">Украина</option>
+	<option value="us">США</option>
+	<option value="ca">Канада</option>
+</select>
+<label for="cities">City</label>
+<select id="ru" class="cities active form-control">
+	<option>Москва</option>
+	<option>Питер</option>
+	<option>Воронеж</option>
+	<option>Казань</option>
+	<option>Абакан</option>
+</select>
+<select id="by" class="cities form-control">
+	<option>Минск</option>
+	<option>Витебск</option>
+	<option>Орша</option>
+		<option>Гомель</option>
+		<option>Гродно</option>
+</select>
+<select id="ua" class="cities form-control">
+	<option>Киев</option>
+	<option>Львов</option>
+	<option>Одесса</option>
+	<option>Харьков</option>
+	<option>Винница</option>
+</select>
+<select id="us" class="cities form-control">
+	<option>Нью-Йорк</option>
+	<option>Чикаго</option>
+	<option>Лос-Анжелес</option>
+	<option>Вашингтон</option>
+	<option>Филадельфия</option>
+</select>
+<select id="ca" class="cities form-control">
+	<option>Монреаль</option>
+	<option>Квебек</option>
+	<option>Оттава</option>
+	<option>Торонто</option>
+	<option>Калгари</option>
+</select>
+<script type="text/javascript" src="script.js"></script>
+<label >Favorite programming language</label>
+<div>
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+	<label class="form-check-label" for="flexCheckDefault">
+		Python
+	</label>
+</div>
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" default>
+	<label class="form-check-label" for="flexCheckChecked">
+		JavaScript
+	</label>
+</div>
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" default>
+	<label class="form-check-label" for="flexCheckChecked">
+		C
+	</label>
+</div>
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" default>
+	<label class="form-check-label" for="flexCheckChecked">
+		Ruby
+	</label>
+</div>
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" default>
+	<label class="form-check-label" for="flexCheckChecked">
+		Go
+	</label>
+</div>
+</div>
+<div>
+	<label class="form-group d-block mb-0">
+		New Password
+		<input type="password" placeholder="6 letters or more" required id="txtNewPassword" class="form-control" minlength=6 >
+	</label>
+</div>
+<div >
+	<label class="form-group d-block mb-0">
+		Confirm Password
+		<input class="form-control" placeholder="Once more" required minlength=6 type="password" id="txtConfirmPassword" onkeyup="checkPasswordMatch();">
+	</label>
+</div>
+<div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+<script type="text/javascript" src="check.js"></script>
+<script type="text/javascript" src="valid.js"></script>
+<p><button class="btn btn-primary">Submit</button></p>
+</form>
+
+</body>
+</html>

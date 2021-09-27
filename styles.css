@@ -1,0 +1,44 @@
+* {
+  margin: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.flex-container {
+  background-color: rgb(212, 143, 143);
+  border: 10px solid #a5567e;
+  display: inline-flex;
+  height: 100vh;
+  flex-direction: column;
+  font-size: small;
+}
+.cities {
+  display: none;
+}
+.active.cities {
+  display: inline-block;
+}
+.text-success {
+  color: #28a745;
+}
+.text-danger {
+  color: #dc3545;
+}
+body {
+  overflow: hidden;
+  text-align: center;
+}
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+form {
+  height: 400px;
+  overflow-y: auto;
+  position: relative;
+}
+input::placeholder {
+  font-size: 0.8rem;
+}
