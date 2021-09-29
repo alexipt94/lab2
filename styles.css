@@ -1,13 +1,13 @@
 * {
   margin: auto;
-  padding: 1%;
+  padding: 0.3%;
   box-sizing: border-box;
 }
 .flex-container {
-  background-color: rgb(212, 143, 143);
-  border: 10px solid #a5567e;
+  background-color: rgb(168, 135, 199);
+  border: 10px solid #933cce;
   display: inline-flex;
-  height: 100vh;
+  height: 90vh;
   flex-direction: column;
   font-size: small;
 }
@@ -35,10 +35,11 @@ input:valid {
   border: 2px solid green;
 }
 form {
-  height: 400px;
+  height: 450px;
   overflow-y: auto;
   position: relative;
 }
 input::placeholder {
   font-size: 0.8rem;
 }
+button{ margin-bottom: 0;}
